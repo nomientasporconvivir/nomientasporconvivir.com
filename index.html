@@ -12,15 +12,13 @@
             color: white;
         }
 
-        .sentence {
-            font-size: 16px;
-            top: 50%;
-            left: 50%;
-            position: fixed;
-            transform: translate(-50%, -50%);
-            font-size: 10px;
-            padding: 40px;
-            border: 1px solid white;
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            display: block;
         }
     </style>
 
@@ -31,31 +29,17 @@
         import * as THREE from 'https://cdn.skypack.dev/three@0.134.0';
 
         const scene = new THREE.Scene();
-        console.log(scene);
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        const renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
 
     </script>
 </head>
 
 <body>
-    <div class="sentence">
-        Táctica y estrategia<br><br>
-        Mi táctica es mirarte, aprender cómo sos<br>
-        Quererte como sos<br>
-        Mi táctica es hablarte y escucharte<br>
-        Construir con palabras un puente indestructible<br>
-        Mi táctica es quedarme en tu recuerdo<br>
-        No sé cómo, ni sé con qué pretexto, pero quedarme en vos<br>
-        Mi táctica es ser franco y saber que sos franca<br>
-        Y que no nos vendamos simulacros<br>
-        Para que, entre los dos, no haya telón ni abismos<br>
-        Mi estrategia es, en cambio, más profunda y más simple<br>
-        Mi estrategia es que un día cualquiera<br>
-        No sé cómo, ni sé con qué pretexto<br>
-        Por fin, me necesites<br><br>
-
-        - Mario Benedetti<br>
-
-    </div>
+    <div id="info">Description</div>
 </body>
 
 </html>

@@ -7,10 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>No mientas por convivir</title>
     <style>
-        body {
-            background-color: white;
-            color: black;
-        }
+       body { margin: 0; }
 
         #info {
             position: absolute;
@@ -40,7 +37,7 @@
         const cube = new THREE.Mesh(geometry, material);
         scene.add(cube);
 
-        camera.position.z = 10;
+        camera.position.z = 3;
 
         const animate = function () {
             requestAnimationFrame(animate);
